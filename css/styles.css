@@ -4,9 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 .spaced {
     margin-top: 40px;
 }
@@ -40,6 +42,7 @@ body {
     line-height: 1.6;
 }
 
+/* Header Styles */
 header {
     position: fixed;
     width: 100%;
@@ -56,9 +59,11 @@ nav {
     align-items: center;
 }
 
+/* Navbar Styles */
 .nav-links {
     list-style: none;
     display: flex;
+    transition: transform 0.3s ease-in-out;
 }
 
 .nav-links li {
@@ -77,11 +82,21 @@ nav {
     color: var(--primary-color);
 }
 
+/* Theme Toggle Button */
 #theme-toggle {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 1.2em;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
 }
 
 /* Mobile responsiveness */
@@ -91,28 +106,36 @@ nav {
         display: none;
         width: 100%;
         margin-top: 20px;
+        text-align: center;
+        background-color: var(--nav-background); /* Add background for mobile */
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Show navigation links when active */
     }
 
     .nav-links li {
-        text-align: center;
         margin: 10px 0;
     }
 
     #theme-toggle {
         margin-top: 10px;
+        font-size: 2em; /* Adjust theme toggle button size for mobile */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu icon on small screens */
     }
 }
 
+/* Main Section Styles */
 main {
     padding: 100px 20px 20px 20px;
     max-width: 1200px;
     margin: auto;
 }
 
+/* Section Styling */
 .intro, .about, .projects, .contact {
     text-align: center;
     margin-bottom: 40px;
@@ -140,6 +163,7 @@ main {
     border-radius: 20px;
 }
 
+/* Projects Grid */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -181,6 +205,7 @@ main {
     margin: 0 5px;
 }
 
+/* Contact Form Styles */
 .contact form {
     display: flex;
     flex-direction: column;
@@ -216,16 +241,19 @@ main {
     opacity: 0.9;
 }
 
+/* Hidden Class */
 .hidden {
     display: none;
 }
 
+/* Animation for Sections */
 .intro, .about, .projects, .contact {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s forwards;
 }
 
+/* Footer Styling */
 footer {
     text-align: center;
     padding: 20px 0;
@@ -236,6 +264,7 @@ footer {
     transition: background var(--transition-speed);
 }
 
+/* Fade-in Animation */
 @keyframes fadeInUp {
     to {
         opacity: 1;
