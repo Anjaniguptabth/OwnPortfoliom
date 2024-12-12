@@ -9,6 +9,8 @@ if (currentTheme) {
 }
 
 themeToggleBtn.addEventListener('click', () => {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active'); 
     document.body.classList.toggle('dark');
     let theme = 'light';
     if (document.body.classList.contains('dark')) {
